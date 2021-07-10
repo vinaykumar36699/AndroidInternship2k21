@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_back">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="13dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth"
+        android:gravity="center"
+        android:text="Registraion Form"
+        android:textAllCaps="true"
+        android:textSize="33dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:drawableRight="@drawable/ic_person"
+        android:background="@drawable/shape"
+        android:padding="6dp"
+        android:hint="Enter Name"
+        android:layout_marginTop="15dp"
+        android:textColorHint="@color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mail"
+        android:textColorHint="@color/black"
+        android:hint="Enter Mail"
+        android:background="@drawable/shape"
+        android:drawableRight="@drawable/ic_mail"
+        android:padding="6dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="15dp"/>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        app:boxStrokeWidth="0dp"-->
+<!--        app:startIconDrawable="@drawable/ic_baseline_lock_24"-->
+<!--        app:startIconTint="#E20F0F"-->
+<!--        >-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/shape"-->
+<!--            android:padding="6dp"-->
+<!--            android:drawablePadding="6dp"-->
+<!--            android:id="@+id/pass"-->
+<!--            android:hint="Enter Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/number"
+        android:textColorHint="@color/black"
+        android:background="@drawable/shape"
+        android:hint="Enter Number"
+        android:drawableRight="@drawable/ic_phone"
+        android:padding="6dp"
+        android:inputType="phone"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:hint="Enter Password"
+        android:textColorHint="@color/black"
+        android:background="@drawable/shape"
+        android:drawableRight="@drawable/ic_baseline_lock_24"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        android:layout_marginTop="15dp"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp"
+        android:layout_marginTop="15dp"
+        android:entries="@array/Branch"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape"
+        android:id="@+id/rg">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/male"
+            android:text="Male"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/female"
+            android:text="Female"/>
+    </RadioGroup>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telugu"
+        android:textSize="20dp"
+        android:id="@+id/tel"
+        android:buttonTint="@color/black"
+        android:layout_marginTop="15dp"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hindi"
+        android:id="@+id/hin"
+        android:buttonTint="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="9dp"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="English"
+        android:buttonTint="@color/black"
+        android:id="@+id/eng"
+        android:textSize="20dp"
+        android:layout_marginTop="9dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to add DOB"
+        android:id="@+id/dob"
+        android:onClick="dob"
+        android:layout_gravity="center"
+        android:textSize="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:onClick="save"
+        android:text="submit"
+        app:backgroundTint="@android:color/holo_blue_light" />
+
+</LinearLayout>
+</ScrollView>
